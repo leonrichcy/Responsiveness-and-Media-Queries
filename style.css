@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap');
+
+.colors{
+    color: hsl(322, 100%, 66%)
+    hsl(193, 100%, 96%)
+    hsl(192, 100%, 9%)
+    hsl(208, 11%, 55%)
+}
+
+* {
+	box-sizing: border-box;
+}
+body {
+    min-width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+body *{
+    font-family: 'Open Sans', sans-serif;
+}
+header{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+header img{
+    width: 120px;
+}
+
+h2, h3{
+    line-height: 1.5;
+    color: hsl(192, 100%, 9%);
+}
+p{
+    color: hsl(208, 11%, 55%);
+    font-size: 15px;
+}
+h3{
+    font-size: 25px;
+}
+h2, h3, a, button{
+    font-family: 'Poppins', sans-serif;
+}
+h2, p{
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+
+
+.hero-background{
+    background-color: hsl(193, 100%, 96%);
+}
+.hero{
+    display: grid;
+    min-height: 100vh;
+    justify-items: center;
+    align-items: center;
+}
+.hero div{
+    display: grid;
+}
+.btn{
+    background: hsl(322, 100%, 66%);
+    height: 40px;
+    border: none;
+    color: hsl(193, 100%, 96%);
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 10px;
+}
+.btn:active{
+    background-color: hsl(322, 51%, 69%);
+}
+.white-btn{
+    background-color: white;
+    color: hsl(192, 100%, 9%);
+    width: 100px;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 14px;
+    box-shadow: 0px 0px 3px 0px;
+}
+.white-btn:active{
+    color: rgb(186, 186, 186);
+}
+
+
+
+main {
+    display: grid;
+    justify-items: center;
+    gap: 50px;
+    padding: 60px 20px;
+}
+
+.card{
+    display: grid;
+    border: 1px solid hsl(208, 11%, 55%);
+    border-radius: 20px;
+    box-shadow: 0 0px 15px 3px hsl(208, 9%, 66%);
+}
+
+
+.community{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    background-color: white;
+    align-self: center;
+    border: 1px solid hsl(208, 11%, 55%);
+    border-radius: 20px;
+    box-shadow: 0 0px 10px 1px hsl(208, 9%, 66%);
+}
+.community div{
+    display: grid;
+    gap: 15px;
+    justify-items: center;
+    align-items: center;
+}
+
+
+footer *{
+    color: white;
+}
+footer{
+    width: 100%;
+    display: grid;
+    gap: 30px;
+    background-color: hsl(192, 100%, 9%);
+}
+footer img{
+    width: 190px;
+}
+#location{
+    margin-right: 35px;
+    width: 25px;
+    height: 20px;
+}
+.links a:active{
+    text-decoration: underline;
+}
+.footer-content div div{
+    display: flex;
+    align-items: start;
+}
+.footer-content div div p{
+    margin: 0;
+    line-height: 2;
+}
+.footer-content div div img{
+    margin-right: 25px;
+    margin-top: 10px;
+    width: 20px;
+    height: 15px;
+}
+.socials{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    width: 150px;
+    justify-items: center;
+    align-self: center;
+}
+.socials a i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+}
+.socials a i:active {
+    border-color: hsl(322, 100%, 66%);
+    color: hsl(322, 100%, 66%);
+}
+
+
+
+
+
+/* ************************MOBILE VIEW******************* */
+@media (min-width: 100px) and (max-width: 550px){
+    img{
+        width: 290px;
+    }
+    .hero-background{
+        background-image: url('./assets/bg-hero-mobile.svg');
+    }
+    .hero{
+        padding-top: 100px;
+    }
+    .hero div{
+        justify-items: center;
+        text-align: center;
+        gap: 30px;
+        width: 350px;
+    }
+    .btn{
+        width: 200px;
+    }
+    .card{
+        gap: 20px;
+        text-align: center;
+        width: 330px;
+        padding: 40px 20px;
+    }
+    .card div{
+        padding-top: 20px;
+    }
+    .card img{
+        height: 250px;
+    }
+    .community{
+        top: 80px;
+        padding: 35px 0;
+        width: 350px;
+        height: 190px;
+    }
+    .community h3{
+        font-size: 18px;
+    }
+    .links{
+        display: flex;
+        flex-direction: column;
+        height: 300px;
+        justify-content: space-evenly;
+        padding: 30px 0;
+    }
+    footer{
+        padding: 150px 12px 40px 12px;
+    }
+    footer div{
+        width: 350px;
+    }
+    footer > p{
+        text-align: center;
+    }
+    .footer-content{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+/* ***********************DESKTOP VIEW******************* */
+
+@media (min-width: 600px) and (max-width: 1440px){
+    .hero-background{
+        display: flex;
+        justify-content: center;
+        background-image: url('./assets/bg-hero-desktop.svg');
+    }
+    .hero{
+        align-self: center;
+        grid-template-columns: 500px 600px;
+        gap: 40px;
+        justify-items: center;
+    }
+    .hero div{
+        height: 300px;
+    }
+    .hero img{
+        width: 600px;
+    }
+    .hero div h2{
+        font-size: 40px;
+    }
+    .card{
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        width: 1100px;
+        gap: 50px;
+        padding: 50px 80px;
+    }
+    .card img{
+        width: 400px;
+    }
+    .card div h3{
+        font-size: 30px;
+    }
+    .card:nth-of-type(odd) img{
+        grid-column: 2/3;
+    }
+    .card:nth-of-type(odd) div{
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    .community{
+        top: 100px;
+        padding: 50px 0;
+        width: 700px;
+    }
+    .btn{
+        width: 300px;
+    }
+    footer{
+        padding: 150px 70px 40px 70px;
+    }
+    footer > p{
+        text-align: end;
+    }
+    .footer-content{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 50px;
+        justify-items: center;
+        align-items: baseline;
+    }
+    .links{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .links a{
+        padding: 10px;
+    }
+    .socials{
+        align-self: start;
+    }
+}
